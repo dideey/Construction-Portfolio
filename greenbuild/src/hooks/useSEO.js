@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-const BASE_URL  = 'https://www.greenbuild.com';
-const SITE_NAME = 'GreenBuild Construction';
+const BASE_URL  = 'https://www.wanronhomesolutions.com/';
+const SITE_NAME = 'Wanron Home solutions';
 const DEFAULT_IMG = `${BASE_URL}/og-image.jpg`;
 
 /**
