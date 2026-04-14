@@ -28,8 +28,11 @@ export default function Navbar({ currentPage = 'home' }) {
 
         {/* Logo */}
         <a href="#/" className={styles.logo} onClick={e => navigate(e, '#/')}>
-          <span className={styles.logoIcon} aria-hidden="true">◆</span>
-          <span className={styles.logoText}>{COMPANY.name}</span>
+          <img
+            src="/photos/commercial/logo.jpeg"
+            alt="Wanron Home solutions logo"
+            className={styles.logoImage}
+          />
         </a>
 
         {/* Desktop nav */}

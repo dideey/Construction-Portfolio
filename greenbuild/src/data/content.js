@@ -20,7 +20,7 @@ export const COMPANY = {
   yearsExp:   '5+',
   phone:      '+254(721879675)',
   email:      'Waron2020@gmail.com',
-  address:    '123 Builder St, Construction City',
+  address:    'kenol, Muranga',
   whatsapp:   'https://wa.me/254721879675',
   facebook:   'https://www.facebook.com/WANRONHOMESOLUTION',
 };
@@ -152,7 +152,7 @@ export const ABOUT_STORY = {
     'What started as a small firm and we are growing at a first rate due to our quality of service we have been able to work on a lot of commercial buildings & residentials.',
     
   ],
-  image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80',
+  image: '/photos/commercial/logo.jpeg',
 };
 
 export const CORE_VALUES = [
@@ -185,32 +185,12 @@ export const CORE_VALUES = [
 export const TEAM_MEMBERS = [
   {
     id: 'ceo',
-    name: 'Michael Oduya',
+    name: 'Ronald Wanyoike',
     role: 'Founder & CEO',
-    bio: '30 years in construction. Passionate about sustainable architecture and community-centered design.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    bio: '30 years in construction. Passionate about architecture and community-centered design.',
+    image: '/photos/commercial/Ceo.jpeg',
   },
-  {
-    id: 'cto',
-    name: 'Amina Hassan',
-    role: 'Chief Architect',
-    bio: 'Award-winning architect with expertise in green building certifications and innovative structural design.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
-  },
-  {
-    id: 'ops',
-    name: 'David Kariuki',
-    role: 'Head of Operations',
-    bio: 'Masters in Project Management. Ensures every build is delivered on time, on budget, and beyond expectations.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
-  },
-  {
-    id: 'eng',
-    name: 'Priya Nair',
-    role: 'Lead Structural Engineer',
-    bio: 'Specialises in high-rise and complex structural systems. Over 200 projects delivered without incident.',
-    image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&q=80',
-  },
+  
 ];
 
 // ============================================

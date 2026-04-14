@@ -2,7 +2,7 @@
 // SEO CONFIG — one entry per page
 // ============================================
 
-const BASE_URL = 'https://www.greenbuild.com';
+const BASE_URL = 'https://www.wanronhomesolutions.com';
 
 export const SEO = {
   home: {
@@ -20,14 +20,14 @@ export const SEO = {
       email: 'Wanron2020@gmail.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '123 Builder St',
-        addressLocality: 'Construction City',
+        streetAddress: 'Kenol',
+        addressLocality: 'Muranga',
       },
       geo: { '@type': 'GeoCoordinates', latitude: '-1.286389', longitude: '36.817223' },
       openingHoursSpecification: [
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
       ],
-      sameAs: ['https://facebook.com/WANRONHOMESOLUTIONS', 'https://linkedin.com/company/greenbuild'],
+      sameAs: ['https://facebook.com/WANRONHOMESOLUTIONS', ''],
       foundingDate: '1995',
       numberOfEmployees: { '@type': 'QuantitativeValue', value: 120 },
       areaServed: { '@type': 'Country', name: 'Kenya' },
