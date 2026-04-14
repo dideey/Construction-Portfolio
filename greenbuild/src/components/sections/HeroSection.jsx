@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section className={styles.hero} id="home" aria-label="Hero">
       {/* Background image */}
       <div className={styles.bg}>
-        <img src={HERO_IMG} alt="Construction site aerial view" className={styles.bgImg} />
+        <img src={HERO_IMG} alt="Construction site aerial view" className={styles.bgImg} width="1600" height="900" fetchpriority="high" />
         <div className={styles.overlay} />
       </div>
 
@@ -19,8 +19,8 @@ export default function HeroSection() {
           <p className={styles.eyebrow}>Est. {COMPANY.founded}</p>
 
           <h1 className={styles.heading}>
-            Building the Future<br />
-            <em>with Precision</em>
+            Building Dreams<br />
+            <em>through Construction</em>
           </h1>
 
           <p className={styles.sub}>{COMPANY.subTagline}</p>
@@ -36,7 +36,7 @@ export default function HeroSection() {
         </div>
 
         {/* Floating stat badge */}
-        <div className={styles.badge} aria-label="25+ Years of Experience">
+        <div className={styles.badge} aria-label="5+ Years of Experience">
           <span className={styles.badgeNum}>{COMPANY.yearsExp}</span>
           <span className={styles.badgeLabel}>Years<br />Experience</span>
         </div>

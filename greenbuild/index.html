@@ -3,11 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GreenBuild Construction — Excellence in construction, renovation, and architectural design since 1995." />
-    <title>GreenBuild Construction</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>" />
+
+    <!-- Primary SEO — updated dynamically per page via useSEO hook -->
+    <title>Wanron Home Solutions — Building the Future with Precision</title>
+    <meta name="description" content="Wanron HOme Solutions — excellence in commercial & residential construction, renovation, and sustainable architectural design since 2020. Get a free quote today." />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="theme-color" content="#1a4231" />
+    <link rel="canonical" href="https://www.wanronhomesolutions.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="Wanron Home Solutions" />
+    <meta property="og:title"       content="Wanron Home Solutions — Building the Future with Precision" />
+    <meta property="og:description" content="Excellence in construction, renovation, and architectural design since 1995." />
+    <meta property="og:url"         content="https://www.wanronhomesolutions.com/" />
+    <meta property="og:image"       content="https://www.wanronhomesolutions.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale"      content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Wanron Home Solutions" />
+    <meta name="twitter:description" content="Excellence in construction, renovation, and architectural design since 1995." />
+    <meta name="twitter:image"       content="" />
+
+    <!-- Performance: preconnect to font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/photos/commercial/logo.jpeg" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a4231'/><text y='.9em' font-size='70' x='15'>◆</text></svg>" />
+
+    <!-- Skip navigation for accessibility (helps SEO too) -->
+    <style>
+      .skip-link {
+        position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+      }
+      .skip-link:focus {
+        position: fixed; top: 0; left: 0; width: auto; height: auto;
+        padding: 12px 24px; background: #1a4231; color: #fff;
+        font-family: sans-serif; font-size: 1rem; z-index: 9999;
+        text-decoration: none; border-radius: 0 0 8px 0;
+      }
+    </style>
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=85" fetchpriority="high" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

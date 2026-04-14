@@ -36,6 +36,14 @@
   line-height: 1;
 }
 
+.logoImage {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
 .logoText {
   font-family: var(--font-display);
   font-size: var(--text-xl);
@@ -133,7 +141,8 @@
   transition: all var(--transition-fast);
 }
 
-.mobileLink:hover {
+.mobileLink:hover,
+.mobileLinkActive {
   color: var(--color-primary);
   background: var(--color-primary-light);
 }
