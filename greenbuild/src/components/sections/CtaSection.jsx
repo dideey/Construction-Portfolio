@@ -14,12 +14,16 @@ export default function CtaSection() {
           Join hundreds of satisfied clients and let's build something extraordinary together.
         </p>
         <div className={styles.actions}>
-          <Button href="#contact" size="lg" variant="secondary">
-            Request a Quote Today
-          </Button>
-          <Button href={`tel:${COMPANY.phone}`} size="lg" variant="outline">
+           <Button href={`tel:${COMPANY.phone}`} size="lg" variant="secondary">
             Call Us Now
           </Button>
+          <Button href={`email:${COMPANY.email}`} size="lg" variant="outline">
+            Email Us
+          </Button>
+          <Button href={`whatsapp:${COMPANY.whatsapp}`} size="lg" variant="secondary">
+            Text Us Now
+          </Button>
+          
         </div>
       </div>
     </section>

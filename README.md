@@ -1,92 +1,110 @@
-# Waron Construction 
+# Wanron Home solutions Limited
+
 ## Project Structure
 
 ```
 greenbuild/
-├── index.html                   # Vite HTML entry point
-├── vite.config.js               # Vite config
+├── index.html
+├── vite.config.js
 ├── package.json
 └── src/
-    ├── main.jsx                 # React DOM entry
-    ├── App.jsx                  # Root component (layout + page routing)
+    ├── main.jsx                        # React DOM entry
+    ├── App.jsx                         # Root — router + layout shell
+    │
+    ├── hooks/
+    │   └── useHashRouter.js            # Hash-based client routing
     │
     ├── styles/
-    │   ├── tokens.css           # Design tokens (colors, spacing, typography, shadows)
-    │   └── global.css           # Base/reset styles, utility classes
+    │   ├── tokens.css                  # Design tokens (colors, spacing, fonts)
+    │   └── global.css                  # Base/reset + utility classes
     │
     ├── data/
-    │   └── content.js           # All static site content (nav, services, projects, etc.)
+    │   └── content.js                  # ALL site copy — edit here, never in components
     │
-    ├── pages/
-    │   └── HomePage.jsx         # Home page — assembles all sections
+    ├── pages/                          # One file per route
+    │   ├── HomePage.jsx                # /
+    │   ├── AboutPage.jsx               # /about
+    │   ├── ServicesPage.jsx            # /services
+    │   ├── ProjectsPage.jsx            # /projects
+    │   ├── TestimonialsPage.jsx        # /testimonials
     │
     └── components/
-        ├── layout/              # Page-level structural components
-        │   ├── Navbar.jsx       # Sticky nav with scroll tracking + mobile menu
-        │   ├── Navbar.module.css
-        │   ├── Footer.jsx       # Footer with links and contact info
-        │   └── Footer.module.css
+        ├── layout/                     # Page-level structural components
+        │   ├── Navbar.jsx + .css       # Sticky nav, active page, mobile menu
+        │   └── Footer.jsx + .css       # Footer columns + contact
         │
-        ├── sections/            # Full-width page sections
-        │   ├── HeroSection.jsx
-        │   ├── HeroSection.module.css
-        │   ├── AboutSection.jsx
-        │   ├── AboutSection.module.css
-        │   ├── ServicesSection.jsx
-        │   ├── ServicesSection.module.css
-        │   ├── ProjectsSection.jsx
-        │   ├── ProjectsSection.module.css
-        │   ├── TestimonialsSection.jsx
-        │   ├── TestimonialsSection.module.css
-        │   ├── CtaSection.jsx
-        │   └── CtaSection.module.css
+        ├── ui/                         # Small reusable primitives
+        │   ├── Button.jsx              # primary / secondary / outline / ghost
+        │   ├── SectionLabel.jsx        # Eyebrow uppercase labels
+        │   ├── StarRating.jsx          # 1–5 star display
+        │   └── WhatsAppButton.jsx      # Floating WhatsApp CTA
         │
-        └── ui/                  # Small reusable UI components
-            ├── Button.jsx       # Multi-variant button (primary/secondary/outline/ghost)
-            ├── Button.module.css
-            ├── SectionLabel.jsx # Small uppercase eyebrow labels
-            ├── SectionLabel.module.css
-            ├── StarRating.jsx   # 1–5 star display
-            ├── StarRating.module.css
-            ├── WhatsAppButton.jsx  # Floating WhatsApp CTA
-            └── WhatsAppButton.module.css
+        └── sections/                   # Full-width page sections
+            │
+            │  ── HOME ──
+            ├── HeroSection             # Full-bleed hero with slow zoom
+            ├── AboutSection            # 2-col image + features (home teaser)
+            ├── ServicesSection         # 3×2 service card grid
+            ├── ProjectsSection         # 2-col featured project cards
+            ├── TestimonialsSection     # 3-col testimonial cards
+            ├── CtaSection              # Dark green CTA band (reused on all pages)
+            │
+            │  ── ABOUT ──
+            ├── AboutHero               # Full-bleed hero with breadcrumb
+            ├── AboutStats              # 4-stat dark green bar
+            ├── OurStory                # 2-col image + 3 paragraphs
+            ├── CoreValues              # 4-card values grid
+            ├── TeamSection             # 4-col team cards with hover zoom
+            │
+            │  ── SERVICES ──
+            ├── ServicesHero            # Full-bleed hero
+            ├── ServicesDetailed        # Alternating image↔text rows per service
+            ├── ServicesProcess         # 6-step numbered process grid
+            │
+            │  ── PROJECTS ──
+            ├── ProjectsHero            # Full-bleed hero
+            ├── ProjectsStats           # 4-stat divider bar
+            ├── ProjectsGallery         # Filterable gallery — featured 2-col + 3-col grid
+            │
+            │  ── TESTIMONIALS ──
+            ├── TestimonialsHero        # Green hero with grid pattern
+            ├── TestimonialsStats       # 4-stat card row
+            ├── FeaturedTestimonial     # Large pull-quote + project stats
+            └── TestimonialsGrid        # Filterable 3-col card grid
 ```
+
+## Routes
+
+| URL hash    | Page              |
+|-------------|-------------------|
+| `#/`        | Home              |
+| `#/about`   | About Us          |
+| `#/services`| Services          |
+| `#/projects`| Projects Gallery  |
+| `#/testimonials` | Testimonials |
 
 ## Getting Started
 
 ```bash
-# Install dependencies
 npm install
-
-# Start dev server (http://localhost:5173)
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
+npm run dev        # http://localhost:5173
+npm run build      # Production build → dist/
+npm run preview    # Preview production build
 ```
 
-## Adding New Pages
+## Customising Content
 
-1. Create `src/pages/AboutPage.jsx`
-2. Add sections from `src/components/sections/` or create new ones
-3. Import and render in `App.jsx` (add React Router when ready)
+All copy, data, images, and links live in **`src/data/content.js`**.
+No need to touch component files for content changes.
 
-## Updating Content
+## Design System
 
-All text, links, and data live in **`src/data/content.js`** — no need to touch component files for copy changes.
+Colors, fonts, spacing, shadows, and border-radius are all CSS custom properties in
+**`src/styles/tokens.css`**. Change the primary green once — entire site updates.
 
-## Design Tokens
-
-All colors, fonts, spacing, and shadows are defined as CSS custom properties in **`src/styles/tokens.css`**.  
-Update them once to restyle the entire site.
-
-## Tech Stack
-
-- **React 18** — UI components
-- **Vite** — lightning-fast dev/build
-- **CSS Modules** — scoped component styles
-- **CSS Custom Properties** — design tokens
-- Google Fonts: **Playfair Display** (display) + **DM Sans** (body)
+| Token                  | Value       |
+|------------------------|-------------|
+| `--color-primary`      | `#1a4231`   |
+| `--color-bg`           | `#f6f8f7`   |
+| `--font-display`       | Playfair Display |
+| `--font-body`          | DM Sans     |

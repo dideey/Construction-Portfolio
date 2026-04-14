@@ -16,6 +16,7 @@ export default function AboutSection() {
             src={ABOUT_IMG}
             alt="Modern interior designed by GreenBuild"
             className={styles.img}
+          width="800" height="800"
           />
           <div className={styles.statCard}>
             <span className={styles.statNum}>{COMPANY.yearsExp}</span>
@@ -33,7 +34,7 @@ export default function AboutSection() {
           </h2>
 
           <p className={styles.body}>
-            GreenBuild is a premier construction firm dedicated to high-quality craftsmanship
+            Wanron Home Solutions is a premier construction firm dedicated to high-quality craftsmanship
             and sustainable building practices. Our team of experts ensures every project is
             delivered with precision and integrity, focusing on durability and aesthetic excellence.
           </p>

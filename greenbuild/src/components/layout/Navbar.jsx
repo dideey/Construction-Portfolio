@@ -3,33 +3,23 @@ import { NAV_LINKS, COMPANY } from '../../data/content';
 import Button from '../ui/Button';
 import styles from './Navbar.module.css';
 
-export default function Navbar() {
-  const [scrolled,     setScrolled]     = useState(false);
-  const [menuOpen,     setMenuOpen]     = useState(false);
-  const [activeSection, setActive]      = useState('home');
+export default function Navbar({ currentPage = 'home' }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  /* Sticky + active-section tracking */
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 20);
-
-      const sections = NAV_LINKS.map(l => l.href.replace('#', ''));
-      for (const id of [...sections].reverse()) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 100) {
-          setActive(id);
-          break;
-        }
-      }
-    };
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = (e, href) => {
+  // Close mobile menu on page change
+  useEffect(() => { setMenuOpen(false); }, [currentPage]);
+
+  const navigate = (e, href) => {
     e.preventDefault();
     setMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    window.location.hash = href.replace('#', '');
   };
 
   return (
@@ -37,19 +27,19 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
 
         {/* Logo */}
-        <a href="#home" className={styles.logo} onClick={e => handleNavClick(e, '#home')}>
-          <span className={styles.logoIcon}>◆</span>
+        <a href="#/" className={styles.logo} onClick={e => navigate(e, '#/')}>
+          <span className={styles.logoIcon} aria-hidden="true">◆</span>
           <span className={styles.logoText}>{COMPANY.name}</span>
         </a>
 
         {/* Desktop nav */}
         <nav className={styles.nav} aria-label="Main navigation">
-          {NAV_LINKS.map(({ label, href }) => (
+          {NAV_LINKS.map(({ label, href, page }) => (
             <a
-              key={href}
+              key={label}
               href={href}
-              className={`${styles.navLink} ${activeSection === href.replace('#', '') ? styles.active : ''}`}
-              onClick={e => handleNavClick(e, href)}
+              className={`${styles.navLink} ${currentPage === page ? styles.active : ''}`}
+              onClick={e => navigate(e, href)}
             >
               {label}
             </a>
@@ -57,11 +47,11 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <Button href="#contact" size="sm" className={styles.cta}>
+        <Button href="#contact" size="sm" className={styles.cta} onClick={e => navigate(e, '#/contact')}>
           Get Quote
         </Button>
 
-        {/* Mobile hamburger */}
+        {/* Hamburger */}
         <button
           className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
           onClick={() => setMenuOpen(v => !v)}
@@ -74,21 +64,21 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className={styles.mobileMenu} role="dialog" aria-label="Mobile navigation">
-          {NAV_LINKS.map(({ label, href }) => (
+        <nav className={styles.mobileMenu} aria-label="Mobile navigation">
+          {NAV_LINKS.map(({ label, href, page }) => (
             <a
-              key={href}
+              key={label}
               href={href}
-              className={styles.mobileLink}
-              onClick={e => handleNavClick(e, href)}
+              className={`${styles.mobileLink} ${currentPage === page ? styles.mobileLinkActive : ''}`}
+              onClick={e => navigate(e, href)}
             >
               {label}
             </a>
           ))}
-          <Button href="#contact" size="md" className={styles.mobileCta}>
+          <Button href="#/contact" size="md" className={styles.mobileCta} onClick={e => navigate(e, '#/contact')}>
             Get a Quote
           </Button>
-        </div>
+        </nav>
       )}
     </header>
   );

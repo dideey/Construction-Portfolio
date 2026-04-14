@@ -133,7 +133,8 @@
   transition: all var(--transition-fast);
 }
 
-.mobileLink:hover {
+.mobileLink:hover,
+.mobileLinkActive {
   color: var(--color-primary);
   background: var(--color-primary-light);
 }

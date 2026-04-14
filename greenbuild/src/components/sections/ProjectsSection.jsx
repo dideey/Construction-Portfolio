@@ -12,9 +12,6 @@ function ProjectCard({ title, category, description, image }) {
           <span className={styles.category}>{category}</span>
           <h3 className={styles.cardTitle}>{title}</h3>
           <p className={styles.cardDesc}>{description}</p>
-          <Button href="#" size="sm" variant="outline">
-            View Project →
-          </Button>
         </div>
       </div>
     </article>
@@ -32,7 +29,7 @@ export default function ProjectsSection() {
             <SectionLabel>Portfolio</SectionLabel>
             <h2 className={styles.heading}>Featured Projects</h2>
           </div>
-          <Button href="#" variant="ghost" size="md">
+          <Button href="#/projects" variant="ghost" size="md">
             View All Projects →
           </Button>
         </div>

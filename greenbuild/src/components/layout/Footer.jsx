@@ -4,18 +4,24 @@ import styles from './Footer.module.css';
 export default function Footer() {
   const year = new Date().getFullYear();
 
+  const navigate = (e, href) => {
+    e.preventDefault();
+    window.location.hash = href.replace('#', '');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <footer className={styles.footer} id="contact">
       <div className={`container ${styles.inner}`}>
 
-        {/* Brand column */}
+        {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.logo}>
             <span className={styles.logoIcon}>◆</span>
             <span className={styles.logoText}>{COMPANY.name}</span>
           </div>
           <p className={styles.tagline}>
-            Leading the way in high-precision construction and sustainable architectural solutions for a better tomorrow.
+            Leading the way in high-precision construction and architectural solutions for a better tomorrow.
           </p>
         </div>
 
@@ -25,19 +31,19 @@ export default function Footer() {
           <ul className={styles.list}>
             {FOOTER_LINKS.quick.map(({ label, href }) => (
               <li key={label}>
-                <a href={href} className={styles.link}>{label}</a>
+                <a href={href} className={styles.link} onClick={e => navigate(e, href)}>{label}</a>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Services links */}
+        {/* Services */}
         <div className={styles.col}>
           <h4 className={styles.colHeading}>Services</h4>
           <ul className={styles.list}>
             {FOOTER_LINKS.services.map(({ label, href }) => (
               <li key={label}>
-                <a href={href} className={styles.link}>{label}</a>
+                <a href={href} className={styles.link} onClick={e => navigate(e, href)}>{label}</a>
               </li>
             ))}
           </ul>
@@ -47,6 +53,7 @@ export default function Footer() {
         <div className={styles.col}>
           <h4 className={styles.colHeading}>Contact</h4>
           <ul className={styles.contactList}>
+             
             <li>
               <span className={styles.contactIcon}>📍</span>
               <span>{COMPANY.address}</span>
@@ -69,8 +76,8 @@ export default function Footer() {
           <div className={styles.bottomInner}>
             <p className={styles.copy}>© {year} {COMPANY.name} Construction. All rights reserved.</p>
             <div className={styles.legalLinks}>
-              <a href="#" className={styles.legalLink}>Privacy Policy</a>
-              <a href="#" className={styles.legalLink}>Terms of Service</a>
+              <a href="#/" className={styles.legalLink}>Privacy Policy</a>
+              <a href="#/" className={styles.legalLink}>Terms of Service</a>
             </div>
           </div>
         </div>
