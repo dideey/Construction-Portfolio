@@ -19,10 +19,11 @@ export default function CoreValues() {
     <section className={`section ${styles.values}`} id="values">
       <div className="container">
         <div className={styles.header}>
-          <SectionLabel centered>What Drives Us</SectionLabel>
-          <h2 className={styles.heading}>Our Core Values</h2>
+          <SectionLabel>Here are 12 Points you must never forget.</SectionLabel>
+          <h2 className={styles.heading}>The Psychology of Building</h2>
           <p className={styles.sub}>
-            These aren't words on a wall — they're the principles that guide every decision we make on and off the job site.
+            No matter how small or how gigantic your project is, you have to know a few things
+            regarding building.
           </p>
         </div>
 

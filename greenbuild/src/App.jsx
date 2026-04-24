@@ -10,6 +10,7 @@ import ProjectsPage      from './pages/ProjectsPage';
 import PropertiesPage    from './pages/PropertiesPage';
 import TestimonialsPage  from './pages/TestimonialsPage';
 import './styles/global.css';
+import InsightPage from './pages/InsightPage';
 
 export default function App() {
   const page = useHashRouter();
@@ -55,6 +56,7 @@ export default function App() {
       case 'projects':     return <ProjectsPage />;
       case 'properties':   return <PropertiesPage />;
       case 'testimonials': return <TestimonialsPage />;
+      case 'insights': return <InsightPage/>;
       default:             return <HomePage />;
     }
   };

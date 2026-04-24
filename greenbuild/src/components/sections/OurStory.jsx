@@ -25,9 +25,16 @@ export default function OurStory() {
           <SectionLabel>{ABOUT_STORY.eyebrow}</SectionLabel>
           <h2 className={styles.heading}>{ABOUT_STORY.heading}</h2>
           <div className={styles.paragraphs}>
-            {ABOUT_STORY.paragraphs.map((p, i) => (
-              <p key={i} className={styles.body}>{p}</p>
-            ))}
+            {ABOUT_STORY.paragraphs.map((p, i) => {
+              const subheadingKey = i === 0 ? 'subheading' : `subheading${i}`;
+              const subheading = ABOUT_STORY[subheadingKey];
+              return (
+                <div key={i}>
+                  {subheading && <h3 className={styles.subheading}>{subheading}</h3>}
+                  <p className={styles.body}>{p}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

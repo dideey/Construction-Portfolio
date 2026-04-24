@@ -8,6 +8,7 @@ export const NAV_LINKS = [
   { label: 'Services',     href: '#/services',     page: 'services' },
   { label: 'Projects',     href: '#/projects',     page: 'projects' },
   { label: 'Properties',   href: '#/properties',   page: 'properties' },
+  { label: 'Insights',     href: '#/insights',     page: 'insights' },
   { label: 'Testimonials', href: '#/testimonials', page: 'testimonials' },
  
 ];
@@ -146,14 +147,52 @@ export const ABOUT_STATS = [
 export const ABOUT_STORY = {
   eyebrow: 'Our Story',
   heading: 'From Foundations to Skylines',
+  subheading: 'About the company',
+  subheading1: 'Company Mission',
+  subheading2: 'Company vision',
+  subheading3: 'Field of Operation',
   paragraphs: [
-    'Founded in 2020 by a group of passionate engineers and architects, Waron Home Solutions began with a single mission: To perform for our clients the highest level of quality construction services at a fair and market competitive prices.To design, process approvals and build homes to actualize dreams',
-    'Every project we take on reflects our company vision which is : To be the best, respectable building contractors who deliver the best to our clients',
-    'What started as a small firm and we are growing at a first rate due to our quality of service we have been able to work on a lot of commercial buildings & residentials.',
+    'WANRON HOME SOLUTIONS LTD was registered on 8th October 2020 as a general company. Later ventured in to construction industry. It is a construction company registered with NCA6 certificate.',
+    'To be the best, respectable building contractors who deliver the best to the clients.',
+    'To perform for our clients the highest level of quality construction services at fair and market competitive prices. We design, process approvals and build homes to actualize your dreams.',
+    'Wanron home solutions limited is registered with NCA (National construction Authority Kenya) to undertake buildings works. Currently it is limited to a scope of Kshs. 50 Millions.',
     
   ],
   image: '/photos/commercial/logo.jpeg',
 };
+
+export const LEGAL_DOCS = [
+  {
+    id: 'doc-cert',
+    title: 'NCA Registration',
+    caption: 'Official National Construction Authority certificate proving our registration and compliance.',
+    image: '/photos/certs/NCA-reg.png',
+  },
+  {
+    id: 'doc-permit',
+    title: 'NCA Annual License',
+    caption: 'Verified permit documentation for annual BUilding works',
+    image: '/photos/certs/NCA-cert.png',
+  },
+  {
+    id: 'doc-safety',
+    title: 'Safety Compliance',
+    caption: 'Evidence of site safety approvals and compliance statements for our projects.',
+    image: '/photos/commercial/IMG-20260406-WA0076.jpg',
+  },
+  {
+    id: 'address',
+    title: 'Physical Address',
+    caption: 'Our certificate for the redidential adderess',
+    image: '/photos/certs/physical-address.png',
+  },
+   {
+    id: 'Tax',
+    title: 'Tax compliance',
+    caption: 'Evidence that we are tax compliant',
+    image: '/photos/certs/Tax-compliance.png',
+  },
+];
 
 export const CORE_VALUES = [
   {
@@ -543,6 +582,223 @@ export const PROJECTS_EXTENDED = [
     image: '/photos/residentials/Screenshot from 2026-04-07 17-56-28.png',
     featured: false,
   },
+   {
+    id: '00',
+    title: 'Customer sacco flat',
+    category: 'Commercial',
+    location: 'Githunguri, Utawala',
+    year: '2026',
+    projectvalue: '7.2M',
+    description: 'Flat',
+    tags: ['Commecrial'],
+    image: '/photos/commercial/00.png',
+    featured: true,
+  },
+  {
+    id: '01',
+    title: 'Peter\'s mansionatte',
+    category: 'Residential',
+    location: 'Kenol, Githanji',
+    year: 'from 5th may 2025',
+    projectvalue: '7.5M',
+    description: '',
+    tags: [''],
+    image: '/photos/residentials/01.png',
+    featured: false,
+  },
+  {
+    id: '02',
+    title: '',
+    category: 'Commercial, on-going',
+    location: 'Kenol Town',
+    year: '',
+    projectvalue: '',
+    description: 'DESIGN: 18 one bedroom units, 4 Bedsitters and a parking',
+    tags: [''],
+    image: '/photos/commercial/03.png',
+    featured: false,
+  },
+  {
+    id: '04',
+    title: 'Shops',
+    category: 'Complete',
+    location: 'Kabati,Zabka',
+    year: '',
+    projectvalue: '1.5M',
+    description: '',
+    tags: [''],
+    image: '/photos/residentials/24.png',
+    featured: false,
+  },
+  {
+    id: '05',
+    title: '',
+    category: 'Ongoing',
+    location: '',
+    year: '',
+    projectvalue: '1.5M',
+    description: '',
+    tags: [''],
+    image: '/photos/commercial/05.png',
+    featured: false,
+  },
+  {
+    id: '07',
+    title: 'Fahari residencies',
+    category: '',
+    location: '',
+    year: '',
+    projectvalue: '1.05M',
+    description: '',
+    tags: ['Almost complete'],
+    image: '/photos/commercial/07.png',
+    featured: false,
+  },
+  {
+    id: '08',
+    title: '3-Bedroom bungalow',
+    category: '',
+    location: '',
+    year: '2024',
+    projectvalue: '1.2M',
+    description: '',
+    tags: ['complete'],
+    image: '/photos/residentials/23.png',
+    featured: false,
+  },
+  {
+    id: '09',
+    title: 'Banda',
+    category: 'Residential',
+    location: 'Kenyatta Road',
+    year: '',
+    projectvalue: '1.1M',
+    description: '',
+    tags: [''],
+    image: '/photos/residentials/09.png',
+    featured: false,
+  },
+  {
+    id: '10',
+    title: ' 20-unit flats',
+    category: 'Commercial',
+    location: 'Kenol town. Muranga',
+    year: 'April 2022',
+    projectvalue: '25M',
+    description: 'Falt with 20 units , one bedroomed with parking',
+    tags: [''],
+    image: '/photos/commercial/11.png',
+    featured: false,
+  },
+  {
+    id: '11',
+    title: 'Shops',
+    category: 'Commercial',
+    location: 'Kabati, Muranga',
+    year: '2022',
+    projectvalue: '12M',
+    description: '',
+    tags: ['Complete'],
+    image: '/photos/residentials/12.png',
+    featured: false,
+  },
+  {
+    id: '12',
+    title: 'Misonette',
+    category: '',
+    location: 'Githanji Kenol, Muranga',
+    year: '',
+    projectvalue: '2.5M',
+    description: '',
+    tags: ['Complete'],
+    image: '/photos/residentials/13.png',
+    featured: false,
+  },
+   {
+    id: '13',
+    title: '',
+    category: '',
+    location: 'Kenol, Muranga',
+    year: '',
+    projectvalue: '25M - used 2.5',
+    description: '8 ONE BEDROOMED UNITS AND TWO BEDSITTER UNITS PER FLOOR',
+    tags: ['Ongoing'],
+    image: '/photos/residentials/14.png',
+    featured: false,
+  },
+   {
+    id: '14',
+    title: 'Excavation',
+    category: '',
+    location: 'Kabati, Muranga',
+    year: '2021',
+    projectvalue: '1.5M',
+    description: '',
+    tags: ['Complete'],
+    image: '/photos/residentials/15.png',
+    featured: false,
+  },
+   {
+    id: '15',
+    title: '',
+    category: '',
+    location: '',
+    year: 'Jan 2021',
+    projectvalue: '2.5M Ground floor',
+    description: '',
+    tags: [''],
+    image: '/photos/residentials/16.png',
+    featured: false,
+  },
+   {
+    id: '16',
+    title: 'Bungalow',
+    category: 'Residential',
+    location: 'Kenol, Muranga',
+    year: '2020',
+    projectvalue: '4M',
+    description: 'Occupied',
+    tags: [''],
+    image: '/photos/residentials/17.png',
+    featured: false,
+  },
+   {
+    id: '17',
+    title: '',
+    category: 'Commercial',
+    location: 'Utawala',
+    year: '2020',
+    projectvalue: '8.5M',
+    description: '',
+    tags: [''],
+    image: '/photos/residentials/18.png',
+    featured: false,
+  },
+   {
+    id: '18',
+    title: '',
+    category: '',
+    location: 'Kenyatta road cotton Ridge',
+    year: 'Sept 2019',
+    projectvalue: '8M',
+    description: '',
+    tags: [''],
+    image: '/photos/residentials/20.png',
+    featured: false,
+  },
+   {
+    id: '19',
+    title: '',
+    category: 'Commercial',
+    location: 'Juja Murera',
+    year: 'March 2019 - Dec 2019',
+    projectvalue: '7.9M',
+    description: '',
+    tags: [''],
+    image: '/photos/residentials/22.png',
+    featured: false,
+  },
+
 ];
 
 
@@ -565,25 +821,6 @@ export const PROPERTIES_STATS = [
 ];
 
 export const PROPERTIES = [
-  {
-    id: 'prop-01',
-    title: 'The Canopy Villa',
-    category: 'Luxury',
-    type: 'For Sale',
-    price: 'KSh 48,500,000',
-    priceUSD: '$375,000',
-    location: 'Karen, Nairobi',
-    bedrooms: 5,
-    bathrooms: 4,
-    area: '620 sqm',
-    plot: '0.5 acres',
-    description: 'Stunning 5-bedroom luxury villa nestled in mature gardens. Features open-plan living, a chef kitchen, infinity pool, solar power, and borehole water.',
-    features: ['Infinity Pool', 'Solar Power', 'Smart Home System', 'Staff Quarters', 'Double Garage'],
-    tags: ['Luxury', 'Residential', 'Eco-Smart'],
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80',
-    badge: 'New Listing',
-    featured: true,
-  },
   {
     id: 'prop-02',
     title: 'Land',
@@ -706,3 +943,86 @@ export const FOOTER_LINKS = {
     { label: 'Properties for Sale', href: '#/properties' },
   ],
 };
+
+export const Building_psychology = [
+  {
+    id: '1',
+    title: 'Building is Complicated',
+    description: 'Do not take it lightly. It requires expertise, updated information and skillful planning. Employ people who will help you achieve this dream.',
+  },
+  {
+    id: '2',
+    title: 'Building is a Draining Activity',
+    description: 'The difference between leisure and building is that leisure is nice. Its pleasant now. Building on the other hand requires input and investment. But building will reward you more than leisure.',
+  },
+  {
+    id: '3',
+    title: 'You Need a Source of Income to Build',
+    description: 'It does not matter how small or how big. You need money to build. So do your best to lower expenditure and to increase income so you can have room to build. There is never a perfect time to build. Just start.',
+  },
+  {
+    id: '4',
+    title: 'You will attract Jealous as you Build',
+    description: 'There are some who will like you as long as you are like them or beneath their level. Unfortunately the moment you start building expect missiles. Ignore them and keep going.',
+  },
+  {
+    id: '5',
+    title: 'Being a Landlord is Emotional and Psychological',
+    description: 'The day you will be a Landlord you will even change your step. This is a default setting. Be a good Landlord. Be humble and always respect your tenants. Don\'t be a rude Landlord.'
+
+  },
+  {
+    id: '6',
+    title: 'Build in Stages and in Season',
+    description: 'Break your budget in Stages. Don\'t stress. When I was building my second house people stressed me. They kept saying I was late. By the time I finished building the people who said I was late where no where near me. Build at your level. You are not racing.'
+
+  },
+  {
+    id: '7',
+    title: 'Build for the Next Generation',
+    description: 'Build something that your grand children will cherish.'
+
+  },
+  {
+    id: '8',
+    title: 'Protect Your Investment',
+    description: 'Do things well and legally. Shortcuts always end in tears.'
+
+  },
+  {
+    id: '9',
+    title: 'Learn to take a Break',
+    description: 'When you run out of money go and rest. Take as long as you need to. Just don\'t take forever.'
+
+  },
+  {
+    id: '10',
+    title: 'Build Your Best',
+    description: 'Just do it.'
+
+  },
+  {
+    id: '11',
+    title: 'Make Money',
+    description: 'Your Property will appreciate in value and you will make money. Simple.'
+
+  },
+  {
+    id: '12',
+    title: 'Don\'t Stop Building',
+    description: ''
+
+  },
+];
+
+export const Mansionetee = [
+  {
+    id: '1',
+    title: 'Modern Massionate',
+    photo: '/photos/commercial/mansionate.png',
+    description: 'A five bedroomed Maisonette\'s construction price is determined by the materials to be used, finishes and accompanying facilities like this SQ. At Karen, Runda will cost about 18m to 24m.',
+    paperwalldescription: 'Walls built after casting the topmost slab on a flat roof are typically called parapet walls; they are essentially low walls constructed along the edge of the flat roof, providing a barrier to prevent people or objects from accidentally falling off the roof\'s edge.',
+    paperwallphoto: '/photos/commercial/paperwall.png',
+    constructioncostingdesc: 'A common misconception is that the number of bedrooms defines the size and cost of a house. However, a 3-bedroom house can be small, while a 2-bedroom house can be much larger. The cost is primarily determined by the total area in square meters, not just the number of rooms. To estimate the approximate cost of construction, you need to calculate the total floor area (in square meters) and multiply it by the current market rate, which ranges between Ksh 40,000 and Ksh 45,000 per square meter, depending on materials, finishes, and inflation.',
+  }
+]

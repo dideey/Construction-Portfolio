@@ -113,7 +113,7 @@ export const SEO = {
 
   properties: {
     title: 'Properties for Sale — New Homes & Commercial Spaces by Wanron Home Solutions',
-    description: 'Browse GreenBuild\'s latest properties for sale — newly built residential homes, luxury villas, commercial spaces, and eco-smart developments ready for viewing.',
+    description: 'Browse Wanron Home Solution\'s latest properties for sale — newly built residential homes, luxury villas, commercial spaces, and eco-smart developments ready for viewing.',
     path: '/properties',
     jsonLd: {
       '@context': 'https://schema.org',
@@ -121,6 +121,19 @@ export const SEO = {
       url: `${BASE_URL}/properties`,
       name: 'Wanron Home Solutions Properties for Sale',
       description: 'New-build homes, luxury residences, and commercial spaces available now.',
+    },
+  },
+
+  insights: {
+    title: 'Construction Insights — Building Psychology & Industry Knowledge',
+    description: 'Expert insights on construction psychology, project planning, leadership, and craftsmanship. Learn from Wanron Home Solutions\' experience in building exceptional structures.',
+    path: '/insights',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      url: `${BASE_URL}/insights`,
+      name: 'Wanron Home Solutions Construction Insights',
+      description: 'Expert insights on construction psychology, planning, and craftsmanship.',
     },
   },
 };
