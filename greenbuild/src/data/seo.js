@@ -113,7 +113,7 @@ export const SEO = {
 
   properties: {
     title: 'Properties for Sale — New Homes & Commercial Spaces by Wanron Home Solutions',
-    description: 'Browse GreenBuild\'s latest properties for sale — newly built residential homes, luxury villas, commercial spaces, and eco-smart developments ready for viewing.',
+    description: 'Browse Wanron Home Solution\'s latest properties for sale — newly built residential homes, luxury villas, commercial spaces, and eco-smart developments ready for viewing.',
     path: '/properties',
     jsonLd: {
       '@context': 'https://schema.org',
