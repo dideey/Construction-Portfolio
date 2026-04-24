@@ -46,6 +46,14 @@
   line-height: var(--leading-snug);
 }
 
+.subheading {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
 .paragraphs {
   display: flex;
   flex-direction: column;

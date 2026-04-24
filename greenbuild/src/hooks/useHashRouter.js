@@ -25,6 +25,7 @@ export function useHashRouter() {
       'projects':     'projects',
       'properties':   'properties',
       'testimonials': 'testimonials',
+      'insights':     'insights',
       'contact':      'contact',
     };
     return routes[hash] ?? 'home';

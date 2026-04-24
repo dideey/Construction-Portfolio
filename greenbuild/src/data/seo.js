@@ -123,4 +123,17 @@ export const SEO = {
       description: 'New-build homes, luxury residences, and commercial spaces available now.',
     },
   },
+
+  insights: {
+    title: 'Construction Insights — Building Psychology & Industry Knowledge',
+    description: 'Expert insights on construction psychology, project planning, leadership, and craftsmanship. Learn from Wanron Home Solutions\' experience in building exceptional structures.',
+    path: '/insights',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      url: `${BASE_URL}/insights`,
+      name: 'Wanron Home Solutions Construction Insights',
+      description: 'Expert insights on construction psychology, planning, and craftsmanship.',
+    },
+  },
 };
