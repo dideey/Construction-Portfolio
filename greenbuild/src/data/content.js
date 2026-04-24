@@ -383,7 +383,7 @@ export const SERVICES_EXTENDED = [
     description: 'We provide detailed Bills of Quantities that clearly outline all materials, labor, and costs involved in your construction project helping you plan accurately, control budgets, and avoid unexpected expenses.',
     features: ['Labour Costing', 'Value Engineering', 'Cost Planning & Estimation', 'Material Quantification', 'Procurement Support'],
     icon: '📊',
-    image: 'https://worldestimating.com/wp-content/uploads/2020/02/Estimating-Construction-Costs-Techniques.jpg.webp',
+    image: '/photos/commercial/Bills of quantity.jpg',
     stats: [{ value: '30%', label: 'Cost Savings' }, { value: '100%', label: 'Budget Transparency' }],
   },
     {
