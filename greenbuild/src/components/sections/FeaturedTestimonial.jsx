@@ -3,10 +3,9 @@ import styles from './FeaturedTestimonial.module.css';
 
 const FEATURED = {
   quote: "Wanron Home Solutions didn't just construct a building for us — they partnered with us every step of the way. Their dedication to sustainability, their transparent communication, and their obsessive attention to craft set them apart from every other firm we've worked with. We wouldn't trust anyone else.",
-  name: 'James Wilson',
-  role: 'CEO, TechCore Solutions',
-  project: 'Horizon Business Park',
-  image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+  name: 'Margaret Wambui',
+  role: 'Commercial Homeowner',
+  project: 'Units at kenol',
 };
 
 export default function FeaturedTestimonial() {
@@ -25,12 +24,6 @@ export default function FeaturedTestimonial() {
               <blockquote className={styles.quote}>
                 <p>{FEATURED.quote}</p>
               </blockquote>
-              <footer className={styles.author}>
-                <img
-                  src={FEATURED.image}
-                  alt={FEATURED.name}
-                  className={styles.avatar}
-                />
                 <div>
                   <cite className={styles.name}>{FEATURED.name}</cite>
                   <p className={styles.role}>{FEATURED.role}</p>
@@ -38,13 +31,12 @@ export default function FeaturedTestimonial() {
                     <span aria-hidden="true">🏗️</span> {FEATURED.project}
                   </p>
                 </div>
-              </footer>
             </div>
 
             {/* Stats aside */}
             <div className={styles.statsSide}>
               {[
-                { num: '18mo', desc: 'Project duration' },
+                { num: '10mo', desc: 'Project duration' },
                 { num: '< 1%', desc: 'Budget variance' },
                 { num: '0',    desc: 'Safety incidents' },
                 { num: '★ 5',  desc: 'Overall rating' },
